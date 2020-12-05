@@ -1,0 +1,258 @@
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  --strong-cyan: hsl(171, 66%, 44%);
+  --light-blue: hsl(233, 100%, 69%);
+  --dark-grayish-blue: hsl(210, 10%, 33%);
+  --grayish-blue: hsl(201, 11%, 66%);
+}
+
+body {
+  font-size: 18px;
+  font-family: "Bai Jamjuree", sans-serif;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0;
+}
+
+h1,
+h2,
+h3 {
+  font-weight: 600;
+  color: var(--dark-grayish-blue);
+}
+
+.parrafo {
+  font-weight: 400;
+  color: var(--grayish-blue);
+  font-size: 16.7px;
+  margin-bottom: 40px;
+}
+
+.btn {
+  border: none;
+  width: 95%;
+  padding: 18px;
+  margin: 10px;
+  border-radius: 40px;
+  color: #fff;
+  font-weight: 600;
+  font-size: 16px;
+  cursor: pointer;
+  box-shadow: inset 0 -3px 0 rgba(0, 0, 0, 0.3);
+  transition: background-color 0.4s ease;
+}
+
+.section,
+.footer {
+  margin-top: 100px;
+}
+
+.header,
+.section,
+.aside,
+.footer {
+  padding: 20px 10px;
+  max-width: 500px;
+}
+
+a {
+  text-decoration: none;
+}
+
+/*---------------------HEADER---------------------*/
+
+.header {
+  background-image: url(./images/bg-header-mobile.png);
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+
+.header__logo {
+  margin-top: 90px;
+  width: 120px;
+}
+
+.header__titulo {
+  margin-top: 60px;
+  font-size: 31px;
+}
+
+.btn--ios {
+  background-color: var(--strong-cyan);
+}
+.btn--ios:hover {
+  background-color: hsla(171, 66%, 44%, 0.8);
+}
+
+.btn--mac {
+  background-color: var(--light-blue);
+}
+.btn--mac:hover {
+  background-color: hsla(233, 100%, 69%, 0.8);
+}
+
+/*--------------------SNIPPETS--------------------*/
+
+.snippets__img-container {
+  width: 100%;
+}
+
+.snippets__img {
+  width: 100%;
+  margin-top: 35px;
+}
+
+.snippets__dato {
+  margin-top: 50px;
+}
+
+/*--------------------ACCESS--------------------*/
+.access {
+  margin: 0 auto;
+}
+.access__img {
+  width: 100%;
+  margin-top: 35px;
+}
+
+/*--------------------WORKFLOW--------------------*/
+.workflow__datos {
+  margin-top: 50px;
+}
+
+.workflow__dato {
+  margin-top: 50px;
+}
+
+.workflow__blacklist {
+  height: 32px;
+}
+/*--------------------ASIDE--------------------*/
+
+.aside__advertising {
+  margin-top: 150px;
+}
+
+.aside__logo {
+  width: 50%;
+}
+
+.download {
+  margin-top: 150px;
+}
+
+/*--------------------FOOTER--------------------*/
+.footer {
+  background-color: #eee;
+  width: 100%;
+  padding: 20px 90px;
+}
+
+.footer__logo {
+  width: 50px;
+  margin-bottom: 20px;
+}
+
+.footer__links {
+  display: grid;
+  grid-template-rows: 5;
+  gap: 20px;
+}
+
+.footer__link {
+  text-decoration: none;
+  color: var(--dark-grayish-blue);
+  transition: color 0.4s ease;
+}
+.footer__link:hover,
+.footer__red:hover {
+  color: var(--strong-cyan);
+}
+
+.footer__redes {
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 30px;
+}
+
+.footer__red {
+  color: var(--dark-grayish-blue);
+  cursor: pointer;
+  transition: color 0.4s ease;
+  font-size: 25px;
+}
+
+/*------------------MEDIA QUERIES------------------*/
+
+@media screen and (min-width: 1000px) {
+  .header,
+  .snippets,
+  .workflow,
+  .aside,
+  .footer {
+    max-width: 900px;
+  }
+  .btn {
+    width: 30%;
+  }
+  .snippets__container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    gap: 80px;
+  }
+  .snippets__dato {
+    text-align: left;
+  }
+  .workflow__datos {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+  }
+  .aside__advertising-container {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    align-items: center;
+  }
+  .aside__logo {
+    width: 100%;
+  }
+  .footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  .footer__container {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 70%;
+  }
+  .footer__logo {
+    margin-bottom: 0;
+  }
+  .footer__links {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    width: 75%;
+    margin-left: 40px;
+  }
+  .footer__link {
+    text-align: left;
+  }
+  .footer__contact,
+  .footer__kit {
+    order: 1;
+  }
+  .footer__redes {
+    width: 25%;
+    margin-top: 0;
+  }
+}
